@@ -4,8 +4,11 @@ This repository contains an implementation of ["Graph Adversarial Diffusion Conv
 
 
 
-## Defense Performance against Graph Structure Attack
+## Defense Performance against Non-adaptive Graph Structure Attack
 
+```bash
+cd Non-Adaptive_Adversarial_Attack 
+```
 
 ### 1. Generate disrupted graph structure
 While we provide the disrupted adjacency matrix in the meta_adj folder, you can also use the following commands to generated the disrupted adjacency matrix.
@@ -164,6 +167,19 @@ python gadc.py --degree 1 --lam 1 --lr 0.02 --epochs 200 --weight_decay 1e-5 --h
 python gadc.py --degree 1 --lam 1 --lr 0.02 --epochs 200 --weight_decay 1e-4 --hidden 32 --dataset pubmed --ptb_rate 0.75 
 ```
 
+
+## Defense Performance against Adaptive Graph Structure Attack
+
+```bash
+cd Adaptive_Adversarial_Attack
+python gcn.py --dataset cora
+python gnnguard.py --dataset cora
+python sftgdc.py --dataset cora
+python svd_gcn.py --dataset cora
+python gadc.py --dataset cora
+
+# We can replace dataset
+```
 
 
 ## Denoising Performance against Feature Noise
