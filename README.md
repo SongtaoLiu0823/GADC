@@ -303,7 +303,7 @@ python appnp.py --noise_type gaussian --runs 10 --dataset coauthor-cs --noise_le
 # We can replace dataset and noise_level  
 ```
 
-### GADC
+### 2. GADC Evaluation
 ```bash
 python gadc.py --noise_type gaussian --runs 100 --dataset cora --noise_level 0.1
 # We can replace dataset and noise_level  
