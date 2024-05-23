@@ -183,7 +183,9 @@ python gadc.py --dataset cora
 
 
 ## Denoising Performance against Feature Noise
-
+```bash
+cd Denoising
+```
 
 ### 1. Baseline Evaluation
 
@@ -325,6 +327,10 @@ python gadc_products.py --noise_level 1.0 --lam 256
 
 
 ## Improving Performance in Heterophilic Graphs
+```bash
+cd Heterophilic_Graph
+```
+
 ```bash
 python3 gadc.py --dataset cornell --epsilon 1.0
 # We can replace dataset and epsilon  
