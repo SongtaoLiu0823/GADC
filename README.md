@@ -11,9 +11,10 @@ cd Non-Adaptive_Adversarial_Attack
 ```
 
 ### 1. Generate disrupted graph structure
-While we provide the disrupted adjacency matrix in the meta_adj folder, you can also use the following commands to generated the disrupted adjacency matrix.
+While we provide the disrupted adjacency matrix in the meta_adj folder, you can also use the following commands to generate the disrupted adjacency matrix.
 ```bash
-python setup.py --dataset cora --ptb_rate 0.25  
+python setup.py --dataset cora --ptb_rate 0.25
+# We can replace dataset and ptb_rate 
 ```
 
 ### 2. Baseline Evaluation
