@@ -4,7 +4,7 @@ This repository contains an implementation of ["Graph Adversarial Diffusion Conv
 
 
 
-## Defense Performance against Non-adaptive Graph Structure Attack
+## (I). Defense Performance against Non-adaptive Graph Structure Attack
 
 ```bash
 cd Non-Adaptive_Adversarial_Attack 
@@ -19,25 +19,25 @@ python setup.py --dataset cora --ptb_rate 0.25
 
 ### 2. Baseline Evaluation
 
-### GCN
+#### GCN
 ```bash
 python gcn.py --dataset cora --ptb_rate 0.25 
 # We can replace dataset and ptb_rate  
 ```
 
-### GAT
+#### GAT
 ```bash
 python gat.py --dataset cora --ptb_rate 0.25  
 # We can replace dataset and ptb_rate  
 ```
 
-### APPNP
+#### APPNP
 ```bash
 python appnp.py --dataset cora --ptb_rate 0.25  
 # We can replace dataset and ptb_rate  
 ```
 
-### SSGC
+#### SSGC
 ```bash
 python ssgc.py --epochs 100 --lr 0.2 --weight_decay 1e-5 --alpha 0.05 --degree 16 --dataset cora --ptb_rate 0.25  
 # We can replace ptb_rate  
@@ -49,7 +49,7 @@ python ssgc.py --epochs 100 --lr 0.2 --weight_decay 2e-5 --alpha 0.05 --dataset 
 # We can replace ptb_rate  
 ```
 
-### NAGphormer
+#### NAGphormer
 ```bash
 python main.py --batch_size 2000 --dropout 0.1 --hidden_dim 512 --hops 3  --n_heads 8 --n_layers 1 --pe_dim 3 --peak_lr 0.01  --weight_decay=1e-05 --dataset cora --ptb_rate 0.25  
 # We can replace ptb_rate  
@@ -61,25 +61,25 @@ python main.py --batch_size 2000 --dropout 0.1 --hidden_dim 512 --hops 7  --n_he
 # We can replace ptb_rate  
 ```
 
-### Robust GCN
+#### Robust GCN
 ```bash
 python rgcn.py --dataset cora --ptb_rate 0.25  
 # We can replace dataset and ptb_rate  
 ```
 
-### GCN Jaccard
+#### GCN Jaccard
 ```bash
 python gcn_jaccard.py --dataset cora --ptb_rate 0.25  
 # We can replace dataset and ptb_rate  
 ```
 
-### GCN SVD
+#### GCN SVD
 ```bash
 python gcn_svd.py --dataset cora --ptb_rate 0.25  
 # We can replace dataset and ptb_rate  
 ```
 
-### Pro-GNN
+#### Pro-GNN
 ```bash
 python prognn.py --alpha 5e-4 --beta 1.5 --gamma 1 --lambda_ 0.001 --lr 5e-4 --epoch 1000 --dataset cora --ptb_rate 0.25  
 # We can replace ptb_rate  
@@ -91,13 +91,13 @@ python prognn.py --alpha 0.3 --beta 2.5 --gamma 1 --lambda_ 0.001 --lr 1e-2 --ep
 # We can replace ptb_rate  
 ```
 
-### GNNGuard
+#### GNNGuard
 ```bash
 python main.py --modelname GCN --GNNGuard True --dataset cora --ptb_rate 0.25  
 # We can replace dataset and ptb_rate  
 ```
 
-### Elastic GNN
+#### Elastic GNN
 ```bash
 cd code
 python main.py --random_splits 1 --runs 10 --lr 0.01 --K 10 --lambda1 9 --lambda2 3 --weight_decay 0.0005 --hidden 16 --normalize_features False --dataset Cora-adv --ptb_rate 0.25  
@@ -110,7 +110,7 @@ python main.py --random_splits 1 --runs 10 --lr 0.01 --K 10 --lambda1 9 --lambda
 # We can replace ptb_rate 
 ```
 
-### HANG-quad
+#### HANG-quad
 ```bash
 python main.py --function hangquad --block constant --lr 0.005 --dropout 0.4 --input_dropout 0.4 --batch_norm --time 8 --hidden_dim 64 --step_size 1 --runtime 10 --add_source --batch_norm --gpu 4 --epochs 800 --patience 150 --dataset cora --ptb_rate 0.25  
 # We can replace ptb_rate 
@@ -122,7 +122,7 @@ python main.py --function hangquad --block constant --lr 0.005 --dropout 0.4 --i
 # We can replace ptb_rate 
 ```
 
-### STABLE
+#### STABLE
 ```bash
 python main.py --alpha 0.6 --beta 2 --k 7  --jt 0.03 --cos 0.25 --dataset cora --ptb_rate 0.25  
 # We can replace ptb_rate 
@@ -134,13 +134,13 @@ python main.py --alpha 0.1 --beta 2 --k 5  --jt 0.03 --cos 0.1 --dataset pubmed 
 # We can replace ptb_rate 
 ```
 
-### GCN-GARNET
+#### GCN-GARNET
 ```bash
 python main.py --device 0 --backbone gcn --dataset cora --attack meta --ptb_rate 0.25 --perturbed
 # We can replace dataset and ptb_rate  
 ```
 
-### EvenNet
+#### EvenNet
 ```bash
 python main.py --runs 100 --dataset cora --ptb_rate 0.25 --alpha 0.9  
 # We can replace ptb_rate 
@@ -155,7 +155,7 @@ python main.py --runs 100 --dataset pubmed --ptb_rate 0.75 --alpha 0.9
 
 ### 3. GADC Evaluation
 
-### GADC
+#### GADC
 ```bash
 python gadc.py --degree 6 --lam 1 --lr 0.02 --epochs 100 --weight_decay 1e-5 --hidden 32 --dataset cora --ptb_rate 0.25  
 python gadc.py --degree 3 --lam 1 --lr 0.02 --epochs 100 --weight_decay 1e-5 --hidden 32 --dataset cora --ptb_rate 0.5  
@@ -169,7 +169,7 @@ python gadc.py --degree 1 --lam 1 --lr 0.02 --epochs 200 --weight_decay 1e-4 --h
 ```
 
 
-## Defense Performance against Adaptive Graph Structure Attack
+## (II). Defense Performance against Adaptive Graph Structure Attack
 
 ```bash
 cd Adaptive_Adversarial_Attack
@@ -183,14 +183,14 @@ python gadc.py --dataset cora
 ```
 
 
-## Denoising Performance against Feature Noise
+## (III). Denoising Performance against Feature Noise
 ```bash
 cd Denoising
 ```
 
 ### 1. Baseline Evaluation
 
-### MLP
+#### MLP
 ```bash
 python mlp.py --noise_type gaussian --runs 100 --dataset cora --noise_level 0.1
 # We can replace dataset and noise_level  
@@ -205,7 +205,7 @@ python mlp_products.py --noise_level 0.1
 # We can replace noise_level 
 ```
 
-### GCN
+#### GCN
 ```bash
 python gcn_denoising.py --noise_type gaussian --runs 100 --dataset cora --noise_level 0.1
 # We can replace dataset and noise_level  
@@ -220,7 +220,7 @@ python gcn_products.py --noise_level 0.1
 # We can replace noise_level 
 ```
 
-### GAT
+#### GAT
 ```bash
 python gat.py --noise_type gaussian --runs 100 --lr 0.005 --weight_decay 5e-4 --dataset cora --noise_level 0.1
 python gat.py --noise_type gaussian --runs 100 --lr 0.005 --weight_decay 5e-4 --dataset citeseer --noise_level 0.1
@@ -238,7 +238,7 @@ python gat.py --noise_type gaussian --runs 10 --lr 0.01 --weight_decay 0.001 --h
 # We can replace noise_level  
 ```
 
-### GLP
+#### GLP
 ```bash
 python glp.py --noise_type gaussian --runs 100 --dataset cora --noise_level 0.1
 # We can replace dataset and noise_level  
@@ -250,7 +250,7 @@ python glp.py --noise_type gaussian --runs 10 --dataset coauthor-cs --noise_leve
 # We can replace dataset and noise_level  
 ```
 
-### SSGC
+#### SSGC
 ```bash
 python ssgc.py --noise_type gaussian --runs 100 --dataset cora --weight_decay 1e-5 --epochs 100 --noise_level 0.1
 python ssgc.py --noise_type gaussian --runs 100 --dataset citeseer --weight_decay 1e-4 --epochs 150 --noise_level 0.1
@@ -269,7 +269,7 @@ python ssgc_products.py --noise_level 0.1
 # We can replace noise_level 
 ```
 
-### IRLS
+#### IRLS
 ```bash
 python irls.py --noise_type=gaussian --data=cora --mlp_bef=1 --mlp_aft=0 --dropout=0.8 --prop_step=8 --alp=1 --lam=1 --inp_dropout=0.8 --lr=0.3 --weight_decay=5e-5 --runs=100 --seed=42 --noise_level=0.1
 python irls.py --noise_type=gaussian --data=citeseer --mlp_bef=1 --mlp_aft=0 --prop_step=16 --lr=0.1 --num_epoch=500 --inp_dropout=0.5 --lam=1 --alp=1 --weight_decay=0.001 --runs=100 --seed=42 --noise_level=0.1
@@ -286,12 +286,12 @@ python irls.py --noise_type=gaussian --data=coauthor-cs --mlp_bef=1 --mlp_aft=0 
 # We can replace dataset and noise_level  
 ```
 
-### AirGNN
+#### AirGNN
 ```bash
 python airgnn.py --dataset cora --noise_level 0.1
 ```
 
-### APPNP
+#### APPNP
 ```bash
 python appnp.py --noise_type gaussian --runs 100 --dataset cora --noise_level 0.1
 # We can replace dataset and noise_level  
@@ -327,7 +327,7 @@ python gadc_products.py --noise_level 1.0 --lam 256
 ```
 
 
-## Improving Performance in Heterophilic Graphs
+## (IV). Improving Performance in Heterophilic Graphs
 ```bash
 cd Heterophilic_Graph
 ```
