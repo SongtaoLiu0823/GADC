@@ -282,7 +282,6 @@ python irls.py --noise_type=flip --data=pubmed --mlp_bef=1 --mlp_aft=0 --prop_st
 # We can replace ber  
 
 python irls.py --noise_type=gaussian --data=coauthor-cs --mlp_bef=1 --mlp_aft=0 --prop_step=40 --lr=0.5 --num_epoch=500 --inp_dropout=0.8 --lam=1 --alp=1 --weight_decay=0.0005 --runs=10 --seed=42 --noise_level=0.1
-python irls.py --noise_type=gaussian --data=coauthor-cs --mlp_bef=1 --mlp_aft=0 --prop_step=40 --lr=0.5 --num_epoch=500 --inp_dropout=0.8 --lam=1 --alp=1 --weight_decay=0.0005 --runs=10 --seed=42 --noise_level=0.1
 # We can replace dataset and noise_level  
 ```
 
